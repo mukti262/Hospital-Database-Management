@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Form</title>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        
+        <h1>Form</h1>
+        <div class="detail">
+            <form action="PaymentForm" method="post">
+                <label>PayTrans_Num</label><br>
+                <select name="PayTrans_Num" required>
+                    <% data.forEach(function(val){ %>
+                    <option name="PayTrans_Num" value="<%=val.Invoice_num%>"><%=val.Invoice_num%></option>
+                    <% }) %>
+                </select><br>
+                <label>Pay_method</label><br>
+                <input type="text" placeholder="Enter Pay_method" name="Pay_method" required><br>
+                <label>Paid_date</label><br>
+                <input type="date" placeholder="Enter Paid_date" name="Paid_date" required><br>
+                <label>pay_status</label><br>
+                <input type="text" placeholder="Enter pay_status" name="pay_status" required><br>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+          <script>
+            feather.replace()
+          </script>
+        <script src="" async defer></script>
+    </body>
+</html>
